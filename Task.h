@@ -8,12 +8,14 @@ using namespace std;
 
 class Task{
 private:
-    int id;
+    const int id;
     string title;
     string description;
     bool isCompleted = false;
 
 public:
+    Task (int, const string&, const string&, bool);
+
     int getId() const;
     string getTitle() const;
     string getDescription() const;
@@ -25,6 +27,8 @@ public:
     void markAsCompleted();
 
     void displayTask() const;
+
+    ~Task();
 };
 
 #endif

@@ -1,5 +1,7 @@
 #include "Task.h"
 
+Task::Task(int id, const string& title, const string& description, bool isCompleted = false): id(id), title(title), description(description), isCompleted(isCompleted){}
+
 int Task::getId() const{
     return id;
 }
@@ -37,4 +39,8 @@ void Task::displayTask() const{
         cout << "\nTask is not completed";
     }
     cout << "\n---------------------------------\n";
+}
+
+Task::~Task(){
+
 }
